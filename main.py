@@ -1,15 +1,20 @@
-numbers = [3,7,5]
+employee = int(input('Кол-во сотрудников в офисе: '))
+employees = []
 
-while True:
+for ID in range(employee):
+ ID = int(input('ID сотрудника: '))
+ employees.append(ID)
 
- number = int(input('Новое число: '))
 
- numbers.append(number)
+ID = int(input('Какой ID ищем?: '))
+search = False
+for num in employees:
+ if num == ID:
+  search = True
 
- print('Текущий список чисел:', numbers)
 
- for i in numbers:
+if search:
+    print("Сотрудник работает!")
+else:
+    print("Сотрудник не работает!")
 
-   print(i ** 2, i ** 3, i ** 4)
-
- print()
